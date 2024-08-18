@@ -1,3 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@keyframes opacity{
+  from {opacity:0}
+  to {opacity:1}
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight:500;
+  line-height:1.25;
+  color:white;
+  transition:all .2s ease-in-out;
+  animation:opacity .2s ease-in-out;
+}
+
+.monospace{
+  font-family:monospace;
+}
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.roboto-mono{
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +49,149 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root{
+  width:100vw;
+  height:100vh;
+  padding:1.5rem;
+}
+
+video{
+  z-index:-1;
+  filter:brightness(70%);
+}
+
+.rotate90{
+  writing-mode:vertical-lr;
+}
+
+.menuDot{
+  min-width:10px;
+  min-height:10px;
+}
+
+.stroke-2{
+  -webkit-text-stroke:2px white;
+}
+
+.stroke-1{
+  -webkit-text-stroke:1px white;
+}
+
+.perspective{
+  perspective:500px;
+}
+
+.rotate-y{
+  transform-origin:0%;
+  transform:rotateY(20deg);
+}
+
+.rotate-y1{
+  transform-origin:0%;
+  transform:rotateY(10deg);
+}
+
+.rotate-y1:not(.no-hover):hover{
+  transform:rotateY(10deg)
+  translateX(10px);
+}
+
+.rotate-y:not(.no-hover):hover{
+  transform:rotateY(20deg)
+  translateX(10px);
+}
+
+.font-size-1{
+  font-size:clamp(30px, 5vw, 96px);
+}
+
+.font-size-2{
+  font-size:clamp(24px, 3.5vw, 48px);
+}
+
+.font-size-3{
+  font-size:clamp(20px, 2.875vw, 36px);
+}
+
+.font-size-4{
+  font-size:clamp(16px, 2.26vw, 24px);
+}
+
+.w-description{
+  width:600px;
+  max-width:600px;
+}
+
+@media only screen and (max-width:1450px){
+  .w-description{
+    width:500px;
+    max-width:500px;
+  }
+}
+
+@media only screen and (max-width:1140px){
+  .w-description{
+    width:min(400px, 100%);
+    max-width:400px;
+  }
+}
+
+.w-card{
+  width:400px;
+  max-width:400px;
+}
+
+@media only screen and (max-width:1340px){
+  .w-card{
+    width:350px;
+    max-width:350px;
+  }
+}
+
+@media only screen and (max-width:450px){
+  .w-card{
+    border-radius:0;
+    border-left:0;
+    border-right:0;
+    width:100%;
+    max-width:100%;
+  }
+}
+
+.bg-glass{
+  background:rgba(255, 255, 255, 0.05);
+  backdrop-filter:blur(20px);
+}
+
+.mt-1-3{
+  margin-top:33vh;
+}
+
+@media only screen and (max-width:525px){
+  .w-certificate{
+    width:100%;
+    border-radius:0;
+    border-right:none;
+    border-left:none;
+  }
+}
+
+.frame::-webkit-scrollbar{
+  display:none;
+}
+
+.shadow1{
+  box-shadow:0 0 10px black;
+}
+
+.txt-shadow{
+  text-shadow:0 0 10px black;
 }
