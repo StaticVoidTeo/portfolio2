@@ -12,13 +12,13 @@ function Menu({changeEl}){
 
 function Welcome({changeEl}){
   return <div className="w-full h-full flex flex-col items-center justify-center">
-    <div className="flex flex-col">
-      <p className=" font-size-2 font-bold text-black stroke-1">Hey, I'm <span className=" font-bold">Teo Kocev</span></p>
-      <p className="font-size-3 font-bold ">React<span className=" font-bold stroke-1 text-black"> Developer</span></p>
-      <p className="font-size-3 font-bold ">Web<span className=" font-bold stroke-1 text-black"> Developer</span></p>
-      <div onClick={() => changeEl("projects")} className="flex items-center gap-2 hover:gap-4 cursor-pointer"><p className=" font-size-3">🠖</p><p className=" font-size-3">Projects</p></div>
-      <div onClick={() => changeEl("about")} className="flex items-center gap-2 hover:gap-4 cursor-pointer"><p className=" font-size-3">🠖</p><p className=" font-size-3">About Me</p></div>
-      <div onClick={() => changeEl("ed")} className="flex items-center gap-2 hover:gap-4 cursor-pointer"><p className=" font-size-3">🠖</p><p className=" font-size-3">Education</p></div>
+    <div className="flex flex-col gap-1">
+      <p className=" font-size-2 font-bold text-black stroke-1">Hey, I'm <span>Teo Kocev</span></p>
+      <p className="font-size-3">React<span className="font-bold stroke-1 text-black"> Developer</span></p>
+      <p className="font-size-3">Web<span className="font-bold stroke-1 text-black"> Developer</span></p>
+      <div onClick={() => changeEl("projects")} className="flex items-center gap-2 hover:gap-4 cursor-pointer"><p className="font-size-3 nunito">&gt;</p><p className=" font-size-3">Projects</p></div>
+      <div onClick={() => changeEl("about")} className="flex items-center gap-2 hover:gap-4 cursor-pointer"><p className="font-size-3 nunito">&gt;</p><p className=" font-size-3">About Me</p></div>
+      <div onClick={() => changeEl("ed")} className="flex items-center gap-2 hover:gap-4 cursor-pointer"><p className="font-size-3 nunito">&gt;</p><p className=" font-size-3">Education</p></div>
     </div>
   </div>
 }
@@ -57,12 +57,12 @@ function Projects({changeEl}){
     },
   ]
   return <div className="w-full h-full flex pl-5 items-center">
-    <div className="perspective w-fit">
+    <div className="perspective w-fit flex flex-col gap-1">
       <div className="flex justify-between w-full rotate-y no-hover">
         <p className="font-size-1 font-bold">Projects</p>
         <p className="font-size-1 font-bold">5</p>
       </div>
-      <hr className="w-full rotate-y border-b-4 rounded-full no-hover"/>
+      <hr className="w-full rotate-y border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
       <p onClick={() => changeEl("project", projectD[0])} className="font-size-1 font-bold cursor-pointer rotate-y">Uprize<span className="font-bold stroke-2 text-black"> 01</span></p>
       <p onClick={() => changeEl("project", projectD[1])} className="font-size-1 font-bold cursor-pointer rotate-y">EvroPrint<span className="font-bold stroke-2 text-black"> 02</span></p>
       <p onClick={() => changeEl("project", projectD[2])} className="font-size-1 font-bold cursor-pointer rotate-y">Portfolio 1.0<span className="font-bold stroke-2 text-black"> 03</span></p>
@@ -74,8 +74,8 @@ function Projects({changeEl}){
 
 function About(){
   return <div className="w-full h-full flex flex-col items-center justify-start gap-10">
-    <div className="aboutDesc flex flex-col w-fit px-5 mt-1-3">
-      <p className=" font-size-2 font-bold text-black stroke-1 text-center">I'm <span className=" font-bold">Teo Kocev</span></p>
+    <div className="aboutDesc flex flex-col w-fit px-5 mt-1-3 gap-1">
+      <p className=" font-size-2 font-bold text-black stroke-1 text-center">I'm <span>Teo Kocev</span></p>
       <p className="font-size-4 w-description">
       I am a passionate software developer striving towards bringing the best I can for software-driven companies. Ever since I was a child I knew I would be a software developer in the future!
       </p>
@@ -163,21 +163,21 @@ function Ed({changeEl}){
           <p className="font-size-1 font-bold">Certificates</p>
           <p className="font-size-1 font-bold">8</p>
         </div>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[0])} className="font-size-2 font-bold cursor-pointer rotate-y1">Programming with C++</p>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[1])} className="font-size-2 font-bold cursor-pointer rotate-y1">Advanced C++</p>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[2])} className="font-size-2 font-bold cursor-pointer rotate-y1">Programming with C#</p>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[3])} className="font-size-2 font-bold cursor-pointer rotate-y1">Front End Development</p>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[4])} className="font-size-2 font-bold cursor-pointer rotate-y1">Programming with JavaScript</p>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[5])} className="font-size-2 font-bold cursor-pointer rotate-y1">Version Control with Git</p>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[6])} className="font-size-2 font-bold cursor-pointer rotate-y1">JavaScript Algorithms and Data Structures</p>
-        <hr className="w-full rotate-y1 border-b-4 rounded-full no-hover"/>
+        <hr className="w-full rotate-y1 border-b-4 borderShrink:border-b-2 rounded-full no-hover"/>
         <p onClick={() => changeEl("cert", certD[7])} className="font-size-2 font-bold cursor-pointer rotate-y1">Responsive Web Design</p>
       </div>
     </div>
@@ -189,10 +189,10 @@ function Project({changeEl, data}){
     <div className="flex flex-col gap-5 items-center p-5 border-2 border-white rounded-3xl w-certificate bg-glass">
       <p className="font-size-2 font-bold w-description text-center">{data.title}</p>
       <p className="font-size-4 text-center w-description">{data.desc}</p>
-      <div className="flex gap-5 items-center flex-wrap justify-center">
+      <div className="flex gap-2 items-center flex-wrap justify-center">
         {skills}
       </div>
-      <p onClick={() => window.location = data.link} className="roboto-mono font-size-4 px-5 py-2 border-2 border-white rounded-full cursor-pointer bg-transparent hover:bg-white hover:text-black">Visit Site 🠖</p>
+      <p onClick={() => window.location = data.link} className="group roboto-mono font-size-4 px-5 py-2 border-2 border-white rounded-full cursor-pointer bg-transparent hover:bg-white hover:text-black">Visit Site <span className="nunito group-hover:text-black">&gt;</span></p>
     </div>
     <p onClick={() => changeEl("projects")} className="fixed top-10 left-12 text-5xl cursor-pointer nunito font-bold">&lt;</p>
   </div>
@@ -204,14 +204,14 @@ function Cert({changeEl, data}){
     <div className="flex flex-col gap-5 items-center p-5 border-2 border-white rounded-3xl w-certificate bg-glass">
       <p className="font-size-2 font-bold w-description text-center">{data.title}</p>
       <p className="font-size-4 text-center w-description">{data.desc}</p>
-      <div className="flex gap-5 items-center flex-wrap justify-center">
+      <div className="flex gap-2 items-center flex-wrap justify-center">
         {skills}
       </div>
     </div>
     <p onClick={() => changeEl("ed")} className="fixed top-10 left-12 text-5xl cursor-pointer nunito font-bold">&lt;</p>
   </div>
 }
-//font-size-3 : text-4xl, 1 : text-8xl, 2 : text-5xl, 4 : text-2xl
+
 function App() {
   const[el, setEl] = useState(<Welcome changeEl={changeEl}/>);
   const[prevEl, setPrevEl] = useState(<Welcome changeEl={changeEl}/>);

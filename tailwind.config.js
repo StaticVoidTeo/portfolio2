@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      "screens":{
+        "borderShrink":{"raw":"(max-width:940px)"},
+      }
+    },
   },
   plugins: [],
 }
