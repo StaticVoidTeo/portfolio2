@@ -271,7 +271,7 @@ function App() {
   }
   return <div className="frame overflow-scroll w-full h-full border-4 border-white flex items-center justify-center">
     <video 
-      src={require("./media/bg2.mp4")}
+      src={require("./media/bg1.mp4")}
       ref={ vidRef }
       type="video/mp4"
       className="fixed top-0 left-0 w-screen h-screen p-6 object-cover"
